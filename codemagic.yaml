@@ -8,10 +8,14 @@ workflows:
     scripts:
       - name: Install Dependencies
         script: |
+          echo "✅ Listing root directory before install"
+          ls -la
           echo "=== Installing Dependencies ==="
           echo "Running npm install..."
           npm install
 
+          echo "✅ Listing root directory after install"
+          ls -la
           echo "✅ Dependencies installed successfully"
           echo "node_modules count: $(ls node_modules | wc -l) packages"
 
